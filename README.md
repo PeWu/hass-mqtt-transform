@@ -8,3 +8,9 @@ Prerequisite:
 ```
   sudo pip3 install paho-mqtt
 ```
+Usage example:
+```
+  ./hass-mqtt-transform.py --eventstream_topics ha/events --state_topic_prefix ha/states/
+```
+
+Connects to the local mqtt broker, reads the Home Assistant eventstream from the `ha/events` topic and writes states to individual topics, e.g. `ha/states/sun.sun`, `ha/states/sensor.pws_weather`.
